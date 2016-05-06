@@ -20,8 +20,6 @@
 
 		}
 
-		AppxSuper.createXIterableClass.Root = createClassFromSuper(Root);
-
 		return XIterable(AppxSuper);
 
 	};

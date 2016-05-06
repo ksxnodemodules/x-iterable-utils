@@ -5,7 +5,7 @@
 	var EmptyIterable = require('x-iterable-base/template')
 		.fromGenerator(() => EMPTY_GENERATOR);
 
-	var {freeze} = Object;
+	var {freeze, assign} = Object;
 
 	const RETURN_EMPTY_ITERATOR = () => EMPTY_ITERATOR;
 	const EMPTY_GENERATOR = freeze({
@@ -16,11 +16,13 @@
 		done: true
 	});
 
-	const out = new EmptyIterable();
-	out.EmptyIterable = EmptyIterable;
-	out.RETURN_EMPTY_ITERATOR = RETURN_EMPTY_ITERATOR;
-	out.EMPTY_GENERATOR = EMPTY_GENERATOR;
-	out.EMPTY_ITERATOR = EMPTY_ITERATOR;
+	const out = freeze({
+		EmptyIterable,
+		RETURN_EMPTY_ITERATOR,
+		EMPTY_GENERATOR,
+		EMPTY_ITERATOR,
+		__proto__: new EmptyIterable()
+	});
 
 	module.exports = freeze(out);
 

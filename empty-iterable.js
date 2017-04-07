@@ -3,7 +3,7 @@
 const EmptyIterable = require('x-iterable-base/template')
   .fromGenerator(() => EMPTY_GENERATOR)
 
-const {freeze, assign} = Object
+const {freeze} = Object
 
 const RETURN_EMPTY_ITERATOR = () => EMPTY_ITERATOR
 const EMPTY_GENERATOR = freeze({

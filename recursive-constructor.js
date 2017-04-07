@@ -1,13 +1,13 @@
 'use strict'
 const {iterator} = Symbol
 
-module.exports = (object, type, last, iterable, ...rest) => {
+module.exports = (object, Type, last, iterable, ...rest) => {
   if (!rest.length) {
     return new LastItem(iterable, last)
   }
 
   object.first = iterable
-  object.second = new type(...rest)
+  object.second = new Type(...rest)
 
   return object
 }

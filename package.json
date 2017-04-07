@@ -1,7 +1,7 @@
 
 {
   "name": "x-iterable-utils",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "main": "index.js",
   "dependencies": {
     "x-iterable-base": "^3.0.0",

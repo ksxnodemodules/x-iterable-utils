@@ -1,7 +1,7 @@
 'use strict'
 
 const EmptyIterable = require('x-iterable-base/template')
-	.fromGenerator(() => EMPTY_GENERATOR)
+  .fromGenerator(() => EMPTY_GENERATOR)
 
 const {freeze, assign} = Object
 

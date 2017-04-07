@@ -9,7 +9,7 @@ module.exports = (build, iterate) => {
       super()
       return build(this, ...args)
     }
-	}
+  }
 
   return XIterable(AppxSuper)
 }

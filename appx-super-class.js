@@ -1,5 +1,5 @@
 'use strict'
-const {XIterable, Root} = require('x-iterable-base')
+const {XIterable} = require('x-iterable-base')
 
 module.exports = (build, iterate) => {
   const Base = XIterable.fromGenerator(iterate)

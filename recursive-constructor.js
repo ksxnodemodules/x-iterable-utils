@@ -1,6 +1,6 @@
 'use strict'
 
-var {iterator} = Symbol
+const {iterator} = Symbol
 
 module.exports = (object, type, last, iterable, ...rest) => {
   if (!rest.length) {

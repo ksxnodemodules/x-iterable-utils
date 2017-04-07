@@ -11,10 +11,9 @@ module.exports = (value, times) => {
     return []
   }
 
-  var result = []
+  const result = []
   for (; times; --times) {
     result.push(value)
   }
-
   return result
 }

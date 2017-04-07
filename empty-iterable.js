@@ -1,9 +1,9 @@
 'use strict'
 
-var EmptyIterable = require('x-iterable-base/template')
+const EmptyIterable = require('x-iterable-base/template')
 	.fromGenerator(() => EMPTY_GENERATOR)
 
-var {freeze, assign} = Object
+const {freeze, assign} = Object
 
 const RETURN_EMPTY_ITERATOR = () => EMPTY_ITERATOR
 const EMPTY_GENERATOR = freeze({

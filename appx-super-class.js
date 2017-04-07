@@ -1,12 +1,12 @@
 'use strict'
 
-var createClassFromSuper = require('simple-class-utils').createClass.super
-var {XIterable, Root} = require('x-iterable-base')
+const createClassFromSuper = require('simple-class-utils').createClass.super
+const {XIterable, Root} = require('x-iterable-base')
 
-var _key_iterator = Symbol.iterator
+const _key_iterator = Symbol.iterator
 
 module.exports = (build, iterate) => {
-  var Base = XIterable.fromGenerator(iterate)
+  const Base = XIterable.fromGenerator(iterate)
 
   class AppxSuper extends Base {
     constructor (...args) {

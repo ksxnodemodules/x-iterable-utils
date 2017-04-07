@@ -1,5 +1,4 @@
 'use strict'
-
 const {iterator} = Symbol
 
 module.exports = (object, type, last, iterable, ...rest) => {

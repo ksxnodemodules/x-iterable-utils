@@ -1,22 +1,19 @@
+'use strict'
 
-((module) => {
-  'use strict'
+var createClassFromSuper = require('simple-class-utils').createClass.super
+var {XIterable, Root} = require('x-iterable-base')
 
-  var createClassFromSuper = require('simple-class-utils').createClass.super
-  var {XIterable, Root} = require('x-iterable-base')
+var _key_iterator = Symbol.iterator
 
-  var _key_iterator = Symbol.iterator
+module.exports = (build, iterate) => {
+  var Base = XIterable.fromGenerator(iterate)
 
-  module.exports = (build, iterate) => {
-    var Base = XIterable.fromGenerator(iterate)
+  class AppxSuper extends Base {
+    constructor (...args) {
+      super()
+      return build(this, ...args)
+    }
+	}
 
-    class AppxSuper extends Base {
-      constructor (...args) {
-        super()
-        return build(this, ...args)
-      }
-		}
-
-    return XIterable(AppxSuper)
-  }
-})(module)
+  return XIterable(AppxSuper)
+}
